@@ -11,7 +11,17 @@
       "id": "798a454d-6fa5-4050-aa67-7ee602aa2631"
     }
   ],
-  "things": [],
+  "things": [
+    {
+      "name": "dwdd",
+      "description": "fef",
+      "idPlace": "30120f75-bd76-4987-a83a-6d7313f9b44e",
+      "idCategory": "798a454d-6fa5-4050-aa67-7ee602aa2631",
+      "date": "2024-08-23T12:55:34.244Z",
+      "image": "imageseba331f5-6034-4f8f-b1b3-f56d3ed53abc.JPG",
+      "id": "3511f2b6-93db-4e06-8a88-12956be41445"
+    }
+  ],
   "places": [
     {
       "name": "Name1",

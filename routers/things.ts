@@ -1,6 +1,7 @@
 import express from "express";
 import fileDb from "../fileDb";
 import {CategoryWithoutId, PlaceWithoutId, ThingWithoutId} from "../types";
+import {imagesUpload} from "../multer";
 const router = express.Router();
 
 
@@ -63,22 +64,22 @@ router.post('/places', async (req, res) => {
     return res.send(savedPlace)
 });
 
-// router.post('/things', imagesUpload.single('image'),  async (req, res) => {
-//     if(!req.body.name || !req.body.idCategory || !req.body.idPlace){
-//         return res.status(400).send({"error": "Thing name, idCategory, idPlace must be present in the request"});
-//     }
-//
-//     const thing:ThingWithoutId = {
-//         name: req.body.name,
-//         description: req.body.description,
-//         idPlace: req.body.idPlace,
-//         idCategory: req.body.idCategory,
-//         date: new Date().toISOString(),
-//         image: req.file ? req.file.filename : null,
-//     }
-//     const savedPlace = await fileDb.addPlace(thing)
-//
-//     return res.send(savedPlace)
-// });
+router.post('/things', imagesUpload.single('image'),  async (req, res) => {
+    if(!req.body.name || !req.body.idCategory || !req.body.idPlace){
+        return res.status(400).send({"error": "Thing name, idCategory, idPlace must be present in the request"});
+    }
+
+    const thing:ThingWithoutId = {
+        name: req.body.name,
+        description: req.body.description ? req.body.description : null,
+        idPlace: req.body.idPlace,
+        idCategory: req.body.idCategory,
+        date: new Date().toISOString(),
+        image: req.file ? req.file.filename : null,
+    }
+    const savedThing = await fileDb.addThing(thing)
+
+    return res.send(savedThing)
+});
 
 export default router;
