@@ -9,7 +9,6 @@ app.use(express.json())
 app.use(express.static('public'));
 app.use('/', thingsRouter)
 
-
 const run = async()=>{
     await fileDb.init();
 

@@ -8,6 +8,17 @@ export interface IThing{
     date: string;
 }
 
+export interface IThingBrief{
+    id: string;
+    idCategory: string;
+    idPlace: string;
+    name: string;
+}
+export interface ICategoryPlaceBrief{
+    id: string;
+    name: string;
+}
+
 export interface IPlace{
     id: string;
     name: string;

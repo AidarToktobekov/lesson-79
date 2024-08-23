@@ -1,14 +1,14 @@
 {
   "categories": [
     {
-      "name": "Name",
-      "description": "description",
-      "id": "51657a7c-6383-44d5-bd9d-fc02dc87d2b9"
-    },
-    {
       "name": "Name1",
       "description": "description1",
       "id": "798a454d-6fa5-4050-aa67-7ee602aa2631"
+    },
+    {
+      "name": "Category-4",
+      "description": null,
+      "id": "8a623b0b-71fa-4f21-8113-28e1adf9e55d"
     }
   ],
   "things": [
@@ -17,9 +17,9 @@
       "description": "fef",
       "idPlace": "30120f75-bd76-4987-a83a-6d7313f9b44e",
       "idCategory": "798a454d-6fa5-4050-aa67-7ee602aa2631",
-      "date": "2024-08-23T12:55:34.244Z",
-      "image": "imageseba331f5-6034-4f8f-b1b3-f56d3ed53abc.JPG",
-      "id": "3511f2b6-93db-4e06-8a88-12956be41445"
+      "date": "2024-08-23T13:57:08.259Z",
+      "image": "images1ab2ccca-3523-4937-9864-05e580b2746b.JPG",
+      "id": "f44bc164-5a48-41c6-86b4-b41955448ccc"
     }
   ],
   "places": [
@@ -27,16 +27,6 @@
       "name": "Name1",
       "description": "description1",
       "id": "30120f75-bd76-4987-a83a-6d7313f9b44e"
-    },
-    {
-      "name": "Name2",
-      "description": "description2",
-      "id": "0ddee0ab-c71c-4ce6-add6-52a53c74fd3a"
-    },
-    {
-      "name": "Name2",
-      "description": null,
-      "id": "61c40b33-b42d-4e30-b551-7574348ba3a6"
     }
   ]
 }

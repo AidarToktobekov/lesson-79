@@ -21,7 +21,7 @@ router.get('/things', async (req, res) => {
     return res.send(things);
 });
 
-router.get('/thing/:id', async (req, res) => {
+router.get('/things/:id', async (req, res) => {
     const thing = await fileDb.getThing(req.params.id);
     return res.send(thing);
 });
@@ -45,9 +45,9 @@ router.post('/categories', async (req, res) => {
         name: req.body.name,
         description: req.body.description ? req.body.description : null,
     }
-    const savedCategory = await fileDb.addCategory(category)
+    const savedCategory = await fileDb.addCategory(category);
 
-    return res.send(savedCategory)
+    return res.send(savedCategory);
 });
 
 router.post('/places', async (req, res) => {
@@ -59,9 +59,9 @@ router.post('/places', async (req, res) => {
         name: req.body.name,
         description: req.body.description ? req.body.description : null,
     }
-    const savedPlace = await fileDb.addPlace(place)
+    const savedPlace = await fileDb.addPlace(place);
 
-    return res.send(savedPlace)
+    return res.send(savedPlace);
 });
 
 router.post('/things', imagesUpload.single('image'),  async (req, res) => {
@@ -76,10 +76,30 @@ router.post('/things', imagesUpload.single('image'),  async (req, res) => {
         idCategory: req.body.idCategory,
         date: new Date().toISOString(),
         image: req.file ? req.file.filename : null,
-    }
-    const savedThing = await fileDb.addThing(thing)
+    };
+    const savedThing = await fileDb.addThing(thing);
 
-    return res.send(savedThing)
+    return res.send(savedThing);
+});
+router.delete('/places/:id', async (req, res) => {
+    const thing = await fileDb.deletePlace(req.params.id);
+    if (thing){
+        return res.send(thing);
+    }else{
+        return res.status(404).send({"error": "This place cannot be deleted"});
+    }
+});
+router.delete('/things/:id', async (req, res) => {
+    const thing = await fileDb.deleteThing(req.params.id);
+    return res.send(thing);
+});
+router.delete('/categories/:id', async (req, res) => {
+    const thing = await fileDb.deleteCategory(req.params.id);
+    if (thing){
+        return res.send(thing);
+    }else{
+        return res.status(404).send({"error": "This category cannot be deleted"});
+    }
 });
 
 export default router;
