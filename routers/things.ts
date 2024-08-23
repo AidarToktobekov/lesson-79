@@ -4,8 +4,6 @@ import {CategoryWithoutId, PlaceWithoutId, ThingWithoutId} from "../types";
 import {imagesUpload} from "../multer";
 const router = express.Router();
 
-
-
 router.get('/categories', async (req, res) => {
     const categories = await fileDb.getCategories();
     return res.send(categories);

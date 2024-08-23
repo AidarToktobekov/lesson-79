@@ -3,11 +3,11 @@ import thingsRouter from "./routers/things";
 import fileDb from "./fileDb";
 
 const app = express();
-const port = 8000;
+const port = 8080;
 
-app.use(express.json())
+app.use(express.json());
 app.use(express.static('public'));
-app.use('/', thingsRouter)
+app.use('/', thingsRouter);
 
 const run = async()=>{
     await fileDb.init();
@@ -16,4 +16,4 @@ const run = async()=>{
         console.log(`Server started on ${port}`);
     })
 }
-run().catch(console.error)
+run().catch(console.error);
