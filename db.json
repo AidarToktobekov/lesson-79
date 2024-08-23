@@ -1,0 +1,32 @@
+{
+  "categories": [
+    {
+      "name": "Name",
+      "description": "description",
+      "id": "51657a7c-6383-44d5-bd9d-fc02dc87d2b9"
+    },
+    {
+      "name": "Name1",
+      "description": "description1",
+      "id": "798a454d-6fa5-4050-aa67-7ee602aa2631"
+    }
+  ],
+  "things": [],
+  "places": [
+    {
+      "name": "Name1",
+      "description": "description1",
+      "id": "30120f75-bd76-4987-a83a-6d7313f9b44e"
+    },
+    {
+      "name": "Name2",
+      "description": "description2",
+      "id": "0ddee0ab-c71c-4ce6-add6-52a53c74fd3a"
+    },
+    {
+      "name": "Name2",
+      "description": null,
+      "id": "61c40b33-b42d-4e30-b551-7574348ba3a6"
+    }
+  ]
+}
